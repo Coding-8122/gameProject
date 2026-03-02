@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/hyder/gameProject/build/lib/SFML/src/SFML/Window/sfml-window.rc
+winresrc.h
+C:/Users/hyder/gameProject/build/lib/SFML/src/SFML/Window/winresrc.h
+

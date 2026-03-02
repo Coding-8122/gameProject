@@ -1,0 +1,3 @@
+C:\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\mingw64\bin\cmake.exe -E rm -f CMakeFiles\sfml-system.dir/objects.a
+C:\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\mingw64\bin\llvm-ar.exe qc CMakeFiles\sfml-system.dir/objects.a @CMakeFiles\sfml-system.dir\objects1.rsp
+C:\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\mingw64\bin\clang++.exe -g -shared -o ..\..\..\..\..\bin\sfml-system-d-2.dll -Wl,--out-implib,..\..\..\lib\libsfml-system-d.a -Wl,--major-image-version,2,--minor-image-version,6 -Wl,--whole-archive CMakeFiles\sfml-system.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\sfml-system.dir\linkLibs.rsp
