@@ -1,6 +1,7 @@
-Okay, I'm ready. Please provide the sentences. once
+#pragma once
 
 #include <SFML/Graphics.hpp>
+#include "MechanicsHeader.h"
 
 /**
  * @brief Represents a single chess piece on the board.
@@ -11,26 +12,6 @@ Okay, I'm ready. Please provide the sentences. once
  * - Its current board coordinate (e.g. {0,0} = A1)
  * - A sprite used to draw it to the window
  */
-
-/// All piece types used in the game.
-enum class PieceType
-{
-    King,
-    Queen,
-    Rook,
-    Bishop,
-    Knight,
-    Pawn,
-    None
-};
-
-/// Piece colour (side) in the game.
-enum class PieceColor
-{
-    White,
-    Black,
-    None
-};
 
 class Piece
 {
@@ -45,11 +26,7 @@ public:
      * @param texture Texture containing the piece graphic.
      * @param boardPosition Integer board coordinate (e.g. {0,0} = A1).
      */
-    Piece(PieceType type,
-          PieceColor color,
-          const sf::Texture& texture,
-          const sf::Vector2i& boardPosition);
-
+ 
     /// Draw the piece onto the given window.
     void draw(sf::RenderWindow& window) const;
 
