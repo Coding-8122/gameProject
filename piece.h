@@ -47,6 +47,9 @@ public:
     void setCaptured(bool captured);
     bool isCaptured() const;
 
+    // setter for class to have a texture
+    void setTexture(const sf::Texture& texture);
+
 private:
     PieceType    m_type;
     PieceColor   m_color;

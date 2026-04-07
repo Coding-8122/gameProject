@@ -6,6 +6,12 @@
   "output": "CMakeFiles/lab_1.dir/main.cpp.obj"
 },
 {
+  "directory": "C:/Users/hyder/gameProject/build",
+  "command": "C:\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\\mingw64\\bin\\clang++.exe  @CMakeFiles/lab_1.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\lab_1.dir\\piece.cpp.obj -c C:\\Users\\hyder\\gameProject\\piece.cpp",
+  "file": "C:/Users/hyder/gameProject/piece.cpp",
+  "output": "CMakeFiles/lab_1.dir/piece.cpp.obj"
+},
+{
   "directory": "C:/Users/hyder/gameProject/build/lib/SFML/src/SFML/System",
   "command": "C:\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\\mingw64\\bin\\clang++.exe -DSFML_SYSTEM_EXPORTS @CMakeFiles/sfml-system.dir/includes_CXX.rsp -g -std=gnu++14  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wno-unknown-warning-option -o CMakeFiles\\sfml-system.dir\\Clock.cpp.obj -c C:\\Users\\hyder\\gameProject\\lib\\SFML\\src\\SFML\\System\\Clock.cpp",
   "file": "C:/Users/hyder/gameProject/lib/SFML/src/SFML/System/Clock.cpp",
