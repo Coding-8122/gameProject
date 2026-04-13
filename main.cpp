@@ -9,15 +9,44 @@ int main() {
     int row;
     sf::RenderWindow window(sf::VideoMode({ 800, 800 }), "Chess");
     sf::RectangleShape tile(sf::Vector2f(100.f, 100.f));
-    sf::Texture texture;
-     texture.loadFromFile("JohnPablok Cburnett Chess set/PNGs/With Shadow/1x/b_pawn_1x.png"); 
 
+    
+    // loading textures
+    sf::Texture black_texture;
+    sf::Texture white_texture;
+
+    black_texture.loadFromFile("JohnPablok Cburnett Chess set/PNGs/With Shadow/1x/b_pawn_1x.png");     
+    white_texture.loadFromFile("JohnPablok Cburnett Chess set/PNGs/With Shadow/1x/w_pawn_1x.png"); 
+    
     Piece black_pawn;
     Piece white_pawn;
 
-    white_pawn.setTexture(texture);
-    black_pawn.setTexture(texture);
+    white_pawn.setTexture(white_texture);
+    black_pawn.setTexture(black_texture);
     black_pawn.setBoardPosition(sf ::Vector2i(0,1));    
+    white_pawn.setBoardPosition(sf ::Vector2i(0,6));
+
+/* Key for board logic:
+1 = Rook 2 = Knight 3 = Bishop 4 = Queen
+5 = King 6 = Pawn
+
+Positive numbers = Black pieces
+Negative numbers = white pieces
+
+*/
+
+
+
+    int board[8][8] = {
+    {1,2,3,4,5,3,2,1},
+    {6,6,6,6,6,6,6,6},
+    {0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0},
+    {-6,-6,-6,-6,-6,-6,-6,-6},
+    {-1,-2,-3,-4,-5,-3,-2,-1}
+    };
 
     while (window.isOpen()) {
         sf::Event event;
