@@ -2,6 +2,7 @@
 #include "piece.h"
 #include "MechanicsHeader.h"
 #include "button.h"
+#include "iostream"
  
 int main() {
 
@@ -9,6 +10,12 @@ int main() {
     int row;
     sf::RenderWindow window(sf::VideoMode({ 800, 800 }), "Chess");
     sf::RectangleShape tile(sf::Vector2f(100.f, 100.f));
+    int whiteTurn = 1;
+    int blackTurn = -1;
+    int startingRow = -1;
+    int startingColumn = -1;
+    bool isSelecting;
+
 
     
     // loading textures for each piece type and colour from the JohnPablok Chess assets
@@ -75,10 +82,32 @@ Negative numbers = white pieces
         sf::Event event;
        
         while (window.pollEvent(event)) {
+            
+            if(event.type == sf::Event::MouseButtonPressed) {
+                if (event.mouseButton.button == sf::Mouse::Left){
+              column = event.mouseButton.x / 100;
+              row = event.mouseButton.y / 100;
+            
+                if(isSelecting == false && (board[row][column] !=0 )){
+                        startingRow = row;
+                        startingColumn = column;
+                       isSelecting = true; 
+                        std::cout << "The selected piece : " << board[row][column] << " at:" << startingRow  << "," << startingColumn << std::endl;
+                }
+                    else if (isSelecting == true){
+                        board[row][column] = board[startingRow][startingColumn];
+                        board[startingRow][startingColumn] = 0;
+                        isSelecting = false;
+                        std::cout << "The piece is moved to: " << column << "," << row << std::endl;
+                        
+                        }
+                    }
+                }
             if (event.type == sf::Event::Closed) {
                 window.close();
             }
         }
+    
             
         window.clear();
         for (row = 0; row <= 7; row++) {
